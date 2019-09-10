@@ -1,5 +1,5 @@
 export function lookupProfile(firstName, prop) {
-  let foundContact = contacts.find((person) => {
+  const foundContact = contacts.find((person) => {
     return person.firstName === firstName;
   }
   );
@@ -7,7 +7,7 @@ export function lookupProfile(firstName, prop) {
   if (foundContact && foundContact.hasOwnProperty(prop)) {
     return foundContact[prop];
   } else {
-    if (foundContact === undefined) {
+    if (!foundContact) {
       return 'No such contact';
     }
     if (!foundContact.hasOwnProperty(prop)) {
