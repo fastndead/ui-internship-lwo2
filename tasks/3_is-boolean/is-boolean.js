@@ -1,3 +1,3 @@
-export function isBoolean(valueToCheck){
-    return typeof valueToCheck === "boolean" 
+export function isBoolean(valueToCheck) {
+  return typeof valueToCheck === 'boolean';
 }
