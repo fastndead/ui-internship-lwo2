@@ -1,5 +1,4 @@
 export function lookupProfile(firstName, prop) {
-<<<<<<< HEAD
   let foundContact = contacts.find((person) => {
     return person.firstName === firstName;
   }
@@ -16,23 +15,6 @@ export function lookupProfile(firstName, prop) {
     }
   }
 }
-=======
-  const foundContact = contacts.find((person) => {
-    person.firstName === firstName;
-  }
-  );
-  if (foundContact !== undefined) {
-    if (foundContact.hasOwnProperty(prop)) {
-      return foundContact[prop];
-    } else {
-      return 'No such property';
-    }
-  } else {
-    return 'No such contact';
-  }
-}
-
->>>>>>> 9a99949c5f7851e58d6f4aed49ae863c99a53a6f
 const contacts = [
   {
     'firstName': 'Akira',
@@ -57,9 +39,5 @@ const contacts = [
     'lastName': 'Vos',
     'number': 'unknown',
     'likes': ['Javascript', 'Gaming', 'Foxes'],
-<<<<<<< HEAD
   },
-=======
-  }
->>>>>>> 9a99949c5f7851e58d6f4aed49ae863c99a53a6f
 ];
