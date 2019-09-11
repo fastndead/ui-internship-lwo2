@@ -1,5 +1,5 @@
 export function humanizeFormat(number) {
-  if (!number) {
+  if (typeof number != 'number' || number === 0) {
     return '';
   }
   const stringNumber = number.toString();
