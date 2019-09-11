@@ -1,8 +1,7 @@
 export function repeatStringNumTimes(str, num) {
-  let result = '';
-  for (let i = 0; i < num; i++) {
-    result = result.concat(str);
+  if (num > 0) {
+    return str.repeat(num);
   }
-  return result;
+  return '';
 }
 

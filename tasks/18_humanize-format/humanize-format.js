@@ -1,5 +1,5 @@
 export function humanizeFormat(number) {
-  if (typeof number != 'number' || number === 0) {
+  if (typeof number != 'number' || number === 0 || isNaN(number)) {
     return '';
   }
   const stringNumber = number.toString();
