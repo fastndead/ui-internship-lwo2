@@ -1,3 +1,3 @@
 export function truncateArray(arr, howMany) {
-  return arr.slice(howMany, arr.length);
+  return arr.slice(howMany);
 }
