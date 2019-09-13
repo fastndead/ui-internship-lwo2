@@ -1,6 +1,6 @@
 export class God {
   static create() {
-    return [new Man('male', 'Adam'), new Woman('female', 'Eve')];
+    return [new Man( 'Adam'), new Woman( 'Eve')];
   }
 }
 
@@ -12,13 +12,13 @@ export class Human {
 }
 
 export class Man extends Human {
-  constructor(sex, name) {
-    super(sex, name);
+  constructor(name) {
+    super('male', name);
   }
 }
 
 export class Woman extends Human {
-  constructor(sex, name) {
-    super(sex, name);
+  constructor(name) {
+    super('female', name);
   }
 }
