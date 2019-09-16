@@ -5,7 +5,9 @@ export function humanYearsCatYearsDogYears(humanYears) {
   if (humanYears === 2) {
     return [2, 24, 24];
   }
-  return [humanYears,
+  return [
+    humanYears,
     24 + (humanYears - 2) * 4,
-    24 + (humanYears - 2) * 5];
+    24 + (humanYears - 2) * 5,
+  ];
 }

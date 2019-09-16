@@ -1,7 +1,7 @@
 export function sortByBits(arr) {
   return [...arr].sort((a, b) => {
     return bitCount(a) - bitCount(b) === 0 ? a - b : bitCount(a) - bitCount(b);
-  } );
+  });
 }
 
 function bitCount(n) {

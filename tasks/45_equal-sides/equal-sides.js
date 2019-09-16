@@ -1,6 +1,9 @@
 export function findEqualIndex(arr) {
   for (let i = 0; i < arr.length; i++) {
-    if (sum(arr.slice(0, i)) === sum(arr.slice(i + 1, arr.length))) {
+    let leftHalf = arr.slice(0, i);
+    let rightHalf = arr.slice(i + 1);
+
+    if (sum(leftHalf) === sum(rightHalf)) {
       return i;
     }
   }
