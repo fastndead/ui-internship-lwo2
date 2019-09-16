@@ -3,10 +3,10 @@ export function followTheSpy(arr) {
   const route = [initialPoint];
 
   for (let i = 0; i < arr.length; i++) {
-    let nextItinerary = arr.find((item) => {
+    const nextItinerary = arr.find((item) => {
       return item[0] === route[route.length - 1];
     });
-    let [, nextRoutePoint] = nextItinerary;
+    const [, nextRoutePoint] = nextItinerary;
     route.push(nextRoutePoint);
   }
   return route.join(', ');
