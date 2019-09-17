@@ -1,3 +1,8 @@
+/**
+ * Convert decimal numerals to roman
+ * @param {Number} number - decimal number
+ * @return {String} - roman numeral
+ */
 export function convertToRoman(number) {
   const romanDecimalMatch = [[1000, 'M'],
     [900, 'CM'],
