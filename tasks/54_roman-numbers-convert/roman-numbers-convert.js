@@ -1,5 +1,8 @@
 /**
  * Convert decimal numerals to roman
+ * @example
+ * //returns 'III'
+ * convertToRoman(3)
  * @param {Number} number - decimal number
  * @return {String} - roman numeral
  */

@@ -1,5 +1,8 @@
 /**
  * Converts string to pig-latin
+ * @example
+ * // returns 'aliforniacay'
+ * translatePigLatin('california')
  * @param {String} str - string to convert
  * @return {string} - converted to pig-latin string
  */

@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-// import { removeSiblings } from './remove-siblings';
+const fs = require('fs');
+const path = require('path');
+// import from './remove-siblings';
 
 xdescribe('removeSiblings', () => {
   beforeAll(() => {

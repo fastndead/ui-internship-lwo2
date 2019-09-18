@@ -1,6 +1,9 @@
 /**
  * Finds the letter from the string, that is missing,
  * considering that string should contain letters in alphabetical order
+ * @example
+ * // returns 'd'
+ * findLetter('abce')
  * @param {String} str - string to search in
  * @return {string} - missing letter
  */

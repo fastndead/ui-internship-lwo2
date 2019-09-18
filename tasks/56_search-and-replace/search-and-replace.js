@@ -1,5 +1,8 @@
 /**
  * Replaces substring in string with other given string
+ * @example
+ * // returns 'Let us go to the mall'
+ * myReplace('Let us go to the store', 'store', 'mall')
  * @param {String} str - string to replace in
  * @param {String} before - string to replace
  * @param {String} after - string to replace with

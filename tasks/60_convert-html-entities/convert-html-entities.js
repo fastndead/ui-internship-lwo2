@@ -1,6 +1,9 @@
 /**
  * Replaces occurrences of given characters (&, <, >, "(double quote),
  * and '(apostrophe)) with their corresponding HTML entities
+ * @example
+ * // returns 'Dolce &amp; Gabbana'
+ * convertHTML('Dolce & Gabbana')
  * @param {String} str - string to perform replacement
  * @return {String}
  */
