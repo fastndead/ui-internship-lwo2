@@ -1,18 +1,19 @@
 export function SimTime() {
-  let simTime = 0;
-  let realTime = 0;
-  let speed = 1;
-
-  SimTime.prototype.get = function() {
-    return simTime;
-  };
-
-  SimTime.prototype.setSpeed = function(newSpeed) {
-    speed = newSpeed;
-  };
-
-  SimTime.prototype.update = function(currentRealtime) {
-    simTime = simTime + ((currentRealtime - realTime) * speed);
-    realTime = currentRealtime;
-  };
+  this.simTime = 0;
+  this.realTime = 0;
+  this.speed = 1;
 }
+
+SimTime.prototype.get = function() {
+  return this.simTime;
+};
+
+SimTime.prototype.setSpeed = function(newSpeed) {
+  this.speed = newSpeed;
+};
+
+SimTime.prototype.update = function(currentRealtime) {
+  this.simTime = this.simTime +
+    ((currentRealtime - this.realTime) * this.speed);
+  this.realTime = currentRealtime;
+};
