@@ -6,7 +6,7 @@
  * Parameters include range of numbers
  * @param {Number} a - start of the range
  * @param {Number} b - end of the range
- * @returns {number} - smallest common multiple
+ * @return {number} - smallest common multiple
  */
 export function smallestCommons([a, b]) {
   const min = Math.min(a, b);
