@@ -1,6 +1,6 @@
-// import { expressionMatter } from './expressions-matter';
+import { expressionMatter } from './expressions-matter';
 
-xdescribe('Expressions matter', () => {
+describe('Expressions matter', () => {
 
     test('expressionMatter(2, 1, 2) should return 6', () => {
         expect(expressionMatter(2, 1, 2)).toBe(6);
@@ -18,8 +18,8 @@ xdescribe('Expressions matter', () => {
         expect(expressionMatter(1, 2, 3)).toBe(9);
     });
 
-    test('expressionMatter(1, 3, 1) should return 6', () => {
-        expect(expressionMatter(1, 3, 1)).toBe(6);
+    test('expressionMatter(1, 3, 1) should return 5', () => {
+        expect(expressionMatter(1, 3, 1)).toBe(5);
     });
 
     test('expressionMatter(2, 2, 2) should return 8', () => {

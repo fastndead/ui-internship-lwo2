@@ -1,6 +1,6 @@
-// import { deepClone } from './deep-object-clone';
+import { deepClone } from './deep-object-clone';
 
-xdescribe('Deep object clone', () => {
+describe('Deep object clone', () => {
 
     test("deepClone({}) should return an object", () => {
         expect(typeof deepClone({})).toBe('object');
@@ -15,8 +15,8 @@ xdescribe('Deep object clone', () => {
     test("Copy values have to be same as origin", () => {
         const origin = { a: 1, b: { c:10 } };
         const copy = deepClone(origin);
-        expect(origin.a).not.toBe(copy.a);
-        expect(origin.b.c).not.toBe(copy.b.c);
+        expect(origin.a).toBe(copy.a);
+        expect(origin.b.c).toBe(copy.b.c);
     });
 
     test("Change of copy params should not affect origin params", () => {
