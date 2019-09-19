@@ -8,7 +8,9 @@
  */
 export function sumAll(arr) {
   let sum = 0;
-  for (let i = Math.min(...arr); i <= Math.max(...arr); i++) {
+  const max = Math.max(...arr);
+  const min = Math.min(...arr);
+  for (let i = min; i <= max; i++) {
     sum += i;
   }
   return sum;
