@@ -101,7 +101,6 @@ export function updateRecords(id, prop, value ) {
     } else {
       collectionCopy[id][prop] = value;
     }
-
   }
   return collectionCopy;
 }
