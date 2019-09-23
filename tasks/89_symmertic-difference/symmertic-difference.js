@@ -24,7 +24,8 @@ export function sym(...args) {
 export function diffArray(arr1, arr2) {
   const arr1Copy = Array.from(new Set(arr1));
   const arr2Copy = Array.from(new Set(arr2));
-  const result = [...arr1Copy.filter((item) => !arr2Copy.includes(item)),
-    ...arr2Copy.filter((item) => !arr1Copy.includes(item))];
+  const diffArr1 = arr1Copy.filter((item) => !arr2Copy.includes(item));
+  const diffArr2 = arr2Copy.filter((item) => !arr1Copy.includes(item));
+  const result = [...diffArr1, ...diffArr2];
   return result.sort((a, b) => a - b);
 }

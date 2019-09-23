@@ -12,7 +12,7 @@
  * @return {Array}
  */
 export function updateInventory(currentInv, newInv) {
-  const resultInv = currentInv;
+  const resultInv = Array.from(currentInv);
   for (let i = 0; i < newInv.length; i++) {
     let hasItem = false;
     for (let j = 0; j < resultInv.length; j++) {

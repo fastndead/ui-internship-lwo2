@@ -89,7 +89,7 @@ const collection = {
  * @return {Array<Object>} modified collection
  */
 export function updateRecords(id, prop, value ) {
-  let collectionCopy = JSON.parse(JSON.stringify(collection));
+  const collectionCopy = JSON.parse(JSON.stringify(collection));
   if (prop === 'tracks' && !collectionCopy[id][prop]) {
     collectionCopy[id][prop] = [];
   }
