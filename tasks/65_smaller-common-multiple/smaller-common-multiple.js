@@ -15,7 +15,8 @@ export function smallestCommons([a, b]) {
   let multiple = min;
   const numbers = range(min, max);
   for (let i = 0; i < numbers.length; i++) {
-    multiple = (multiple * numbers[i]) / gcd(multiple, numbers[i]);
+    multiple = (multiple * numbers[i]) /
+      greatestCommonDivisor(multiple, numbers[i]);
   }
   return multiple;
 }
@@ -41,11 +42,11 @@ function range(min, max) {
  * Searches for greatest common divisor
  * @example
  * // returns 6
- * gcd(54, 24)
+ * greatestCommonDivisor(54, 24)
  * @param {Number} a
  * @param {Number} b
  * @return {Number}
  */
-function gcd(a, b) {
-  return !b ? a : gcd(b, a % b);
+function greatestCommonDivisor(a, b) {
+  return !b ? a : greatestCommonDivisor(b, a % b);
 }
