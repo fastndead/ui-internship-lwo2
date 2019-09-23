@@ -9,12 +9,12 @@
  * @return {Array} - pairs
  */
 export function pairElement(str) {
-  return str.split('').map((item) => {
-    switch (item) {
-      case 'C': return ['C', 'G'];
-      case 'G': return ['G', 'C'];
-      case 'T': return ['T', 'A'];
-      case 'A': return ['A', 'T'];
-    }
-  });
+  const associations = {
+    A: 'T',
+    T: 'A',
+    C: 'G',
+    G: 'C',
+  };
+  const arr = str.split('');
+  return arr.map((item) => [item, associations[item]]);
 }

@@ -8,13 +8,12 @@
  * @return {String}
  */
 export function DNAStrand(str) {
-  return str.split('').map((item) => {
-    switch (item) {
-      case 'C': return 'G';
-      case 'G': return 'C';
-      case 'T': return 'A';
-      case 'A': return 'T';
-      default: return '';
-    }
-  }).join('');
+  const associations = {
+    A: 'T',
+    T: 'A',
+    C: 'G',
+    G: 'C',
+  };
+  const arr = str.split('');
+  return arr.map((item) => [associations[item]]).join('');
 }
