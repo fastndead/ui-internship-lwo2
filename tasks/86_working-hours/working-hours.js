@@ -50,7 +50,7 @@
  * @return {Array<String>}
  */
 export function formatWorkingHours(data) {
-  const sortedData = Array.from(data)
+  const sortedData = Array.from(data);
   sortedData.sort((day1, day2) => {
     return daysComparer(day1.day, day2.day);
   });
