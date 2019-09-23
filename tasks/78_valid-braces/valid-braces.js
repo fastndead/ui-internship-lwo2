@@ -8,24 +8,14 @@
  * @return {boolean}
  */
 export function validBraces(str) {
-  const stackForBraces = [];
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === '{' ||
-      str[i] === '(' ||
-      str[i] === '[') {
-      stackForBraces.push(str[i]);
-    }
-    if (str[i] === ']' || str[i] === '}' || str[i] === ')') {
-      const peek = stackForBraces[stackForBraces.length - 1];
-
-      if (str[i] === ']' && peek !== '[' ||
-        str[i] === ')' && peek !== '(' ||
-        str[i] === '}' && peek !== '{') {
-        return false;
-      } else {
-        stackForBraces.pop();
-      }
-    }
+  let prev = '';
+  while (str.length !== prev.length) {
+    prev = str;
+    str = str
+        .replace('()', '')
+        .replace('[]', '')
+        .replace('{}', '');
   }
-  return true;
+  return (str.length === 0);
 }
+

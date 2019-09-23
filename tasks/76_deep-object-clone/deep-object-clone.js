@@ -11,9 +11,6 @@ export function deepClone(obj) {
   const copy = {};
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
-      if (Array.isArray(obj[key])) {
-        copy[key] = obj[key].slice();
-      }
       if (typeof obj[key] === 'object') {
         copy[key] = deepClone(obj[key]);
       } else {
