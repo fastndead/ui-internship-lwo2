@@ -50,24 +50,25 @@
  * @return {Array<String>}
  */
 export function formatWorkingHours(data) {
-  data.sort((day1, day2) => {
+  const sortedData = Array.from(data)
+  sortedData.sort((day1, day2) => {
     return daysComparer(day1.day, day2.day);
   });
   const result = [];
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < sortedData.length; i++) {
     let j = i;
-    let str = data[i].day.toUpperCase();
+    let str = sortedData[i].day.toUpperCase();
 
-    while (i !== data.length - 1 &&
-      data[j + 1].from === data[i].from &&
-      data[j + 1].to === data[i].to) {
+    while (i !== sortedData.length - 1 &&
+    sortedData[j + 1].from === sortedData[i].from &&
+    sortedData[j + 1].to === sortedData[i].to) {
       j++;
     }
 
     if (j !== i) {
-      str = str.concat(' - ', data[j].day.toUpperCase());
+      str = str.concat(' - ', sortedData[j].day.toUpperCase());
     }
-    result.push(str + ': ' + data[i].from + ' - ' + data[i].to);
+    result.push(str + ': ' + sortedData[i].from + ' - ' + sortedData[i].to);
     i = j;
   }
   return result;
