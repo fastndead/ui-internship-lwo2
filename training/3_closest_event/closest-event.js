@@ -1,7 +1,11 @@
 /**
- *
- * @param events
- * @param date
+ * @description
+ * Finds name of the closest event to given date
+ * @example
+ * // returns 'Challenger Spacecraft Explodes'
+ * closestEvent(events, new Date(1970, 0, 1))
+ * @param {Array<Object>} events
+ * @param {Date} date
  * @return {Date}
  */
 export function closestEvent(events, date) {
