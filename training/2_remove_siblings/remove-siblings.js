@@ -1,3 +1,7 @@
+/**
+ * Removes all the siblings of given node
+ * @param {Object} node
+ */
 export function removeSiblings(node) {
   let sibling = node.parentNode.firstChild;
 
