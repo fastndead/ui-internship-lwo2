@@ -9,8 +9,8 @@
  */
 export function palindrome(str) {
   const palindrome = str.replace(/[\W_]+/g, '').toLowerCase().split('');
-  let leftHalf = palindrome.slice(0, palindrome.length / 2);
-  let rightHalf = palindrome.length % 2 === 0 ?
+  const leftHalf = palindrome.slice(0, palindrome.length / 2);
+  const rightHalf = palindrome.length % 2 === 0 ?
     palindrome.slice(palindrome.length / 2) :
     palindrome.slice(palindrome.length / 2 + 1);
   return JSON.stringify(leftHalf) === JSON.stringify(rightHalf.reverse());

@@ -13,7 +13,7 @@ export function addTogether(a, b) {
   if (typeof a !== 'number') {
     return;
   }
-  if (b === undefined) {
+  if (!b) {
     return (b) => {
       if (typeof b !== 'number') {
         return;

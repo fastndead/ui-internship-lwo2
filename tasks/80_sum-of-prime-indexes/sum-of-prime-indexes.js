@@ -32,7 +32,7 @@ export function sumPrimeIndexedElements(arr) {
  */
 function isPrime(number) {
   let isPrime = number !== 1;
-  for (let j = 2; j< Math.sqrt(number)+1; j++) {
+  for (let j = 2; j < Math.sqrt(number) + 1; j++) {
     if (number % j === 0) {
       isPrime = false;
       break;
