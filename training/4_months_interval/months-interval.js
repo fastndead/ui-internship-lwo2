@@ -1,3 +1,13 @@
+/**
+ * @description
+ * Finds all months between two dates
+ * @example
+ * // returns ['January']
+ * monthsInterval(new Date(2017, 0, 1), new Date(2017, 0, 1))
+ * @param {Date} start
+ * @param {Date} end
+ * @return {Array<String>}
+ */
 export function monthsInterval(start, end) {
   let result = [];
   const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
