@@ -133,12 +133,10 @@ class Node {
    * creates new node
    * @param {Object} value
    * @param {Object} next
-   * @param {Object} prev
    */
-  constructor(value, next = null, prev = null) {
+  constructor(value, next = null) {
     this.value = value;
     this.next = next;
-    this.prev = prev;
   }
 
   /**
@@ -147,12 +145,5 @@ class Node {
    */
   setNext(link) {
     this.next = link;
-  }
-  /**
-   * setter for the 'prev' property
-   * @param {Object} link
-   */
-  setPrev(link) {
-    this.prev = link;
   }
 }
