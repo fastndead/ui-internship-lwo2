@@ -18,7 +18,7 @@ export class LinkedList {
   push(value) {
     const newNode = new Node(value);
 
-    if (this.head === null) {
+    if (!this.head) {
       this.head = newNode;
       this.tail = newNode;
       this.amount++;
@@ -37,7 +37,7 @@ export class LinkedList {
    */
   removeItem(valueToRemove) {
     let foundValue = this.find(valueToRemove);
-    if (foundValue !== null) {
+    if (foundValue) {
       if (foundValue === this.tail) {
         this.pop();
       } else {
@@ -55,7 +55,7 @@ export class LinkedList {
    */
   iterate(callback) {
     let currentNode = this.head;
-    while (currentNode.next !== null) {
+    while (currentNode.next) {
       callback(currentNode);
       currentNode = currentNode.next;
     }
@@ -83,7 +83,7 @@ export class LinkedList {
    */
   insertAfter(valueToFind, valueToInsert) {
     const foundValue = this.find(valueToFind);
-    if (foundValue !== null) {
+    if (foundValue) {
       foundValue.next = new Node(valueToInsert, foundValue.next, foundValue);
       return true;
     }
@@ -97,7 +97,7 @@ export class LinkedList {
    */
   find(value) {
     let currentNode = this.head;
-    while (currentNode.next !== null) {
+    while (currentNode.next) {
       if (currentNode.value === value) {
         return currentNode;
       }
