@@ -1,5 +1,6 @@
 // import { monthsInterval } from './months-interval';
 
+
 //changed typo: expext -> expect; .toBe -> .toEqual
 
 xdescribe('monthsInterval', () => {
@@ -20,6 +21,7 @@ xdescribe('monthsInterval', () => {
 
   test('should handle case: Month interval same year', () => {
     expect(monthsInterval(new Date(2017, 3, 1), new Date(2017, 7, 1)))
+
       .toEqual(['April', 'May', 'June', 'July', 'August']);
   });
 
@@ -50,6 +52,7 @@ xdescribe('monthsInterval', () => {
 
   test('should handle case: Mutliple years and months interval', () => {
     expect(monthsInterval(new Date(2017, 3, 1), new Date(2043, 9, 1)))
+
       .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
   });
 
