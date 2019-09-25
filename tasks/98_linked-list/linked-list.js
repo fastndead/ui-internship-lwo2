@@ -24,7 +24,6 @@ export class LinkedList {
       this.amount++;
       return;
     }
-    newNode.setPrev(this.tail);
     this.tail.setNext(newNode);
     this.tail = newNode;
     this.amount++;
@@ -41,8 +40,7 @@ export class LinkedList {
       if (foundValue === this.tail) {
         this.pop();
       } else {
-        foundValue.prev = foundValue.next;
-        foundValue = foundValue.prev;
+        this.findPrev(valueToRemove).next = foundValue.next;
       }
       return true;
     }
@@ -71,8 +69,8 @@ export class LinkedList {
       this.tail = null;
       return;
     }
-    this.tail.prev.setNext(null);
-    this.tail = this.tail.prev;
+    this.tail = this.findPrev(this.tail.value);
+    this.tail.next = null;
   }
 
   /**
@@ -105,6 +103,22 @@ export class LinkedList {
     }
     if (this.tail.value === value) {
       return this.tail;
+    }
+    return null;
+  }
+
+  /**
+   * Searches for the given value in list and returns previous element
+   * @param {Object} value - value to find
+   * @return {null| Object} if found - returns found element, if not – null
+   */
+  findPrev(value) {
+    let currentNode = this.head;
+    while (currentNode.next) {
+      if (currentNode.next.value === value) {
+        return currentNode;
+      }
+      currentNode = currentNode.next;
     }
     return null;
   }
