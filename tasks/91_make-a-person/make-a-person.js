@@ -9,7 +9,7 @@ export class Person {
    * @param {String} fullName
    */
   constructor(fullName) {
-    this.fullName = fullName;
+    [this._firstName, this._lastName] = fullName.split(' ');
   }
 
   /**
@@ -18,7 +18,7 @@ export class Person {
    * @return {string}
    */
   getFirstName() {
-    return this.fullName.split(' ')[0];
+    return this._firstName;
   }
 
   /**
@@ -27,7 +27,7 @@ export class Person {
    * @return {string}
    */
   getLastName() {
-    return this.fullName.split(' ')[1];
+    return this._lastName;
   }
 
   /**
@@ -36,7 +36,7 @@ export class Person {
    * @return {String}
    */
   getFullName() {
-    return this.fullName;
+    return this._firstName + ' ' + this._lastName;
   }
 
   /**
@@ -45,7 +45,7 @@ export class Person {
    * @param {String} first
    */
   setFirstName(first) {
-    this.fullName = first + ' ' + this.getLastName();
+    this._firstName = first;
   }
 
   /**
@@ -54,7 +54,7 @@ export class Person {
    * @param {String} last
    */
   setLastName(last) {
-    this.fullName = this.getFirstName() + ' ' + last;
+    this._lastName = last;
   }
 
   /**
@@ -63,6 +63,6 @@ export class Person {
    * @param {String} firstAndLast
    */
   setFullName(firstAndLast) {
-    this.fullName = firstAndLast;
+    [this._firstName, this._lastName] = firstAndLast.split(' ');
   }
 }
