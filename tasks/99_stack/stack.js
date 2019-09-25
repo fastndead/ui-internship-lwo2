@@ -17,7 +17,7 @@ export class Stack {
    */
   push(value) {
     const newNode = new Node(value);
-    if (this.last === null) {
+    if (!this.last ) {
       this.last = newNode;
       this.size++;
       return;

@@ -4,12 +4,12 @@
  * @example
  * //returns 60
  * smallestCommons(1, 5)
- * @param {Number} a
- * @param {Number} b
+ * @param {Number} first
+ * @param {Number} second
  * @return {number} - smallest common multiple
  */
-export function leastCommonMultiple(a, b) {
-  return (a * b) / greatestCommonDivisor(a, b);
+export function leastCommonMultiple(first, second) {
+  return (first * second) / greatestCommonDivisor(first, second);
 }
 
 /**
@@ -18,10 +18,10 @@ export function leastCommonMultiple(a, b) {
  * @example
  * // returns 6
  * greatestCommonDivisor(54, 24)
- * @param {Number} a
- * @param {Number} b
+ * @param {Number} fisrts
+ * @param {Number} second
  * @return {Number}
  */
-export function greatestCommonDivisor(a, b) {
-  return !b ? a : greatestCommonDivisor(b, a % b);
+export function greatestCommonDivisor(fisrts, second) {
+  return !second ? fisrts : greatestCommonDivisor(second, fisrts % second);
 }

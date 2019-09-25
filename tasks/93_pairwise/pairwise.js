@@ -30,5 +30,5 @@ export function pairwise(arr, arg) {
       }
     }
   }
-  return resultIndices.reduce((a, b) => a + b, 0);
+  return resultIndices.reduce((acc, curr) => acc + curr, 0);
 }
